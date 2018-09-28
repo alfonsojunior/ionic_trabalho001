@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title>{{data.nome}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-card margin-top class="max420" margin-top>
+        <ion-card-content>
+            <ion-item>
+                <ion-label>ID</ion-label>
+                <ion-input *ngIf="data.id !== undefined" type="text" [value]="data.id"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Nome</ion-label>
+                <ion-input *ngIf="data.nome !== undefined" type="text" [value]="data.nome"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Curriculo</ion-label>
+                <ion-textarea [value]="data.curriculo" rows="8"></ion-textarea>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Contatos</ion-title>
+    <ion-buttons slot="end">
+        <ion-button large (click)="logout()" >
+            <ion-icon name="log-out" color="danger"> Logout</ion-icon>
+        </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list *ngFor="let contato of data; let i = index;" (click)="detalhes(contato.id)">
+      <ion-item-divider [ngClass]="(i % 2 == 0) ? 'odd' : 'even'">
+        <ion-label text-wrap>{{contato.nome}}</ion-label>
+      </ion-item-divider>
+    </ion-list>
+
+</ion-content>
